@@ -53,7 +53,16 @@ const skills: SkillProps[] = [
   { name: "Python", level: 90, color: "bg-yellow-400", category: "Backend" },
   { name: "Django/Flask", level: 85, color: "bg-yellow-400", category: "Backend" },
   { name: "Microservice", level: 80, color: "bg-yellow-400", category: "Backend" },
+  //
+  // --- UPDATED FRONTEND SKILLS ---
+  //
   { name: "Angular 12", level: 85, color: "bg-red-500", category: "Frontend" },
+  { name: "React", level: 75, color: "bg-red-500", category: "Frontend" }, // NEW: Added React
+  { name: "Responsive Design (Tailwind)", level: 90, color: "bg-red-500", category: "Frontend" }, // NEW: Added Responsive Design
+  { name: "State Management (Redux/NgRx)", level: 80, color: "bg-red-500", category: "Frontend" }, // NEW: Added State Management
+  //
+  // -----------------------------
+  //
   { name: "SQL", level: 85, color: "bg-green-500", category: "Database" },
   { name: "Docker", level: 75, color: "bg-blue-500", category: "DevOps" },
   { name: "CI/CD (GitLab)", level: 80, color: "bg-blue-500", category: "DevOps" },
@@ -99,14 +108,14 @@ const education: EducationProps[] = [
   {
     degree: 'Bachelor of Engineering (B.E.) in Computer Science',
     institution: 'JSS Academy of Technology and Engineering',
-    duration: '2015 - 2019',
+    duration: '2013 - 2017',
     location: 'Bengaluru (CSE)',
   },
   {
     degree: 'High School (Science & Mathematics)',
     institution: 'Blooms Academy',
-    duration: 'N/A',
-    location: 'N/A',
+    duration: '2009 - 2013',
+    location: 'Satna',
   },
 ];
 
