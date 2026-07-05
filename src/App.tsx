@@ -29,7 +29,7 @@ interface ProjectProps {
   title: string;
   description: string;
   tags: string[];
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl: string;
 }
 
@@ -40,7 +40,7 @@ const primaryTitle = "Senior Software Engineer";
 const email = "shreyansh.24gautam@gmail.com";
 const phone = "+91 9481202247";
 const location = "JPNagar, Bengaluru";
-const profileSummary = "Software Engineer with 5+ Years of Experience in Development and Automation. A results-driven engineer with expertise in building scalable and efficient software solutions. Proven ability to optimize systems, automate workflows, and improve application performance. Strong background in developing web applications, leading end-to-end projects, and driving continuous improvement in both development and deployment processes.";
+const profileSummary = "Senior Software Engineer with 6+ years of experience in Python backend development, REST API design, and AI/ML application engineering. Currently building hands-on expertise in Retrieval-Augmented Generation (RAG), LangChain, and Agentic AI systems. Proven track record of delivering scalable Django/Flask applications, optimizing SQL performance (25% improvement), automating workflows (15+ hrs/week saved), and integrating complex enterprise systems. Actively leveraging Generative AI and GitHub Copilot at Epicor to build next-generation POS/ERP solutions.";
 const excellenceAward = "Received the 'Excellence' Award for outstanding contributions to project innovation, Zeomega.";
 
 const linkedInUrl = "https://www.linkedin.com/in/shreyanshgautam";
@@ -52,6 +52,7 @@ const resumeDownloadUrl = "/myportfolio/Shreyansh-Gautam-Resume.pdf";
 const skills: SkillProps[] = [
   { name: "Python", level: 90, category: "Backend" },
   { name: "Django/Flask", level: 85, category: "Backend" },
+  { name: "LangChain / RAG", level: 80, category: "Backend" },
   { name: "Microservice", level: 80, category: "Backend" },
 
   { name: "Angular 12", level: 85, category: "Frontend" },
@@ -59,15 +60,15 @@ const skills: SkillProps[] = [
   { name: "Responsive Design (Tailwind)", level: 90, category: "Frontend" },
   { name: "State Management (Redux/NgRx)", level: 80, category: "Frontend" },
 
-  // NEW DATABASE SKILLS ADDED
   { name: "SQL", level: 85, category: "Database" },
   { name: "PostgreSQL", level: 80, category: "Database" },
   { name: "MongoDB", level: 70, category: "Database" },
-  // -------------------------
+  { name: "ChromaDB (Vector)", level: 75, category: "Database" },
 
   { name: "Docker", level: 75, category: "DevOps" },
   { name: "CI/CD (GitLab)", level: 80, category: "DevOps" },
   { name: "AWS", level: 70, category: "DevOps" },
+  { name: "GitHub Copilot", level: 85, category: "DevOps" },
 ];
 
 const experience: ExperienceProps[] = [
@@ -77,7 +78,10 @@ const experience: ExperienceProps[] = [
     duration: 'April 2025 - Present',
     location: 'Bengaluru',
     achievements: [
-      'Working on backend development of a retail application using **Django** within the Retail platform, focusing on APIs and database integration.',
+      'Developed and enhanced POS/ERP functionalities for <strong>Propello by Epicor</strong> using <strong>GitHub Copilot</strong>, Generative AI, and Agentic AI-assisted development workflows.',
+      'Integrated weigh scale systems and delivery management systems with ERP/POS applications through <strong>RESTful API</strong> development and third-party integrations.',
+      'Implemented AI-assisted unit testing strategies using <strong>GitHub Copilot</strong> and automation agents, improving code quality and test coverage across modules.',
+      'Designed, developed, and optimized backend APIs to improve system performance, scalability, and operational efficiency.',
     ],
   },
   {
@@ -122,25 +126,23 @@ const education: EducationProps[] = [
 
 const portfolioProjects: ProjectProps[] = [
   {
-    title: "Django Microservice & API Gateway",
-    description: "Built a scalable microservice architecture using Django and Flask, secured with an API Gateway to manage routing, authentication, and rate limiting for high-volume traffic.",
-    tags: ["Django", "Flask", "Microservices", "Docker", "AWS API Gateway"],
-    liveUrl: "https://project-api-demo.netlify.app",
-    githubUrl: "https://github.com/shreyanshgautam24/scalable-api-repo",
+    title: "AI Document Chatbot (RAG)",
+    description: "Production-ready Retrieval-Augmented Generation chatbot that answers questions about your documents. Built with LangChain, Groq (Llama 3), ChromaDB for vector storage, and local sentence-transformers for zero-cost embeddings. Features a FastAPI backend, file upload, and real-time Streamlit chat UI — deployed live on Hugging Face Spaces.",
+    tags: ["LangChain", "Groq / Llama 3", "ChromaDB", "FastAPI", "Streamlit", "Python"],
+    liveUrl: "https://huggingface.co/spaces/gshreyansh/rag-chatbot",
+    githubUrl: "https://github.com/shreyanshgautam24/rag-chatbot",
   },
   {
-    title: "Responsive Full-Stack E-Commerce Clone",
-    description: "A modern e-commerce application featuring a responsive Angular 12/React frontend, real-time product filtering, and a secure Django backend handling payments and user profiles.",
-    tags: ["Angular 12", "React", "Django", "SQL", "Responsive Design"],
-    liveUrl: "https://ecommerce-clone.vercel.app",
-    githubUrl: "https://github.com/shreyanshgautam24/ecommerce-clone-repo",
+    title: "Healthcare Claims Processing API",
+    description: "RESTful API service for processing and validating healthcare insurance claims built at Zeomega Infotech. Includes complex SQL query optimisation achieving a 25% reduction in execution time, automated data pipelines that saved 15+ hours/week of manual effort, and a GitLab CI/CD pipeline for zero-downtime deployments.",
+    tags: ["Django", "PostgreSQL", "REST APIs", "SQL Optimisation", "GitLab CI/CD", "Docker"],
+    githubUrl: "https://github.com/shreyanshgautam24",
   },
   {
-    title: "CI/CD & Cloud Deployment Pipeline",
-    description: "Developed and maintained a fully automated CI/CD pipeline using GitLab, Docker, and AWS, reducing deployment time for the main application from 45 minutes to under 5 minutes.",
-    tags: ["GitLab CI/CD", "Docker", "AWS", "Automation", "DevOps"],
-    liveUrl: "https://cicd-dashboard-example.io",
-    githubUrl: "https://github.com/shreyanshgautam24/cicd-pipeline-scripts",
+    title: "Full-Stack E-Commerce Platform",
+    description: "A complete e-commerce web application with a responsive Angular 12 frontend and a Django REST backend. Features real-time product filtering, secure JWT-based user authentication, and an integrated payment gateway — built for CIOC FMCG to handle high-volume retail transactions.",
+    tags: ["Angular 12", "Django", "REST APIs", "SQL", "Docker", "Responsive Design"],
+    githubUrl: "https://github.com/shreyanshgautam24",
   },
 ];
 
@@ -283,9 +285,11 @@ const ProjectCard: React.FC<{ data: ProjectProps; index: number }> = ({ data, in
         ))}
       </div>
       <div className="flex gap-4">
-        <a href={data.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors shadow-blue-500/50 hover:shadow-lg">
-          <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
-        </a>
+        {data.liveUrl && (
+          <a href={data.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors shadow-blue-500/50 hover:shadow-lg">
+            <ExternalLink className="w-4 h-4 mr-2" /> Live Demo
+          </a>
+        )}
         <a href={data.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm transition-colors">
           <Code className="w-4 h-4 mr-2" /> Code
         </a>
